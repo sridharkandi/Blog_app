@@ -1,0 +1,10 @@
+<p>
+  <b>name:</b>
+  <%= comment.name %>
+</p>
+ 
+<p>
+  <b>comment:</b>
+  <%= comment.your_comment %>
+</p>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>posts</title>
+<%= stylesheet_link_tag "application" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tag %>
+</head>
+<body class="<%= controller.controller_name %>">
+<div id="banner">
+<%= image_tag("logo.png") %>
+<%= @page_title || "Adventures" %>
+</div>
+<div id="columns">
+<div id="side">
+
+</div>
+<div id="main">
+<%= yield %>
+</div>
+</div>
+</body>
+</html>
+
