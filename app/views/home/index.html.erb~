@@ -1,0 +1,91 @@
+<script>
+    // Load this when the DOM is ready
+    $(function(){
+        // You used .myCarousel here.
+        // That's the class selector not the id selector,
+        // which is #myCarousel
+        $('#myCarousel').carousel();
+    });
+</script>
+
+
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">  <img src="assets/3.2.jpg" width="1170" height="180" alt="Slide 1"> </div>
+    <div class="item"> <img src="assets/1.2.jpg" width="1170" height="180" alt="Slide 2"> </div>
+    <div class="item"> <img src="assets/2.2.jpg" width="1170" height="180" alt="Slide 3"> </div>
+    <div class="item"> <img src="assets/4.2.jpg" width="1170" height="180" alt="Slide 4"> </div> 
+     
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+  <table border="3">
+ <div id='left_col8'>
+          <div class='sider_box_green deal_box'>
+	<!-- <%= link_to image_tag("18.jpg",alt:"exura") %> -->
+       
+          <div class='details'>
+      <div> <img src="assets/18.jpg">
+            <h3 class='blue'>Micro Lighting &dash; Generic content.</h3>
+            <p>Misty mountains, winding roads, teak wood forests, lush green valleys, orange groves, unending stretches of tea plantations, inviting smells of coffee and cardamom- that is Coorg in all its splendour. This pristine location is a prime spot for tourists, nature lovers and adventurers. Situated in the Western Ghats, about 252 kms from Bangalore, Coorg is one of the most beautiful hill stations you can visit.</p></div>
+  
+            <a class='more' href='#'>more &rarr;</a>
+          </div>
+          <a class='buy_button btn_orange' href='#'>Explore!</a>
+        </div>
+<div class='sider_box_green deal_box'>
+<%= link_to image_tag("19.jpg",alt:"exura")%>
+          <div class='details'>
+            <h3 class='blue'>Hot air Ballooning  &dash; Generic content.</h3>
+            <p>The Hot air balloons travel with the wind, so you never know which picturesque place you are going to land on, but manoeuvred by expert pilots the landing is really smooth. The crew will be waiting at the landing site to assist with the landing. Then you can take part in deflating the balloon and help in packing it away..</p>
+            <p>Quidem excepturi mollitia similique possimus quia. Esse et aut amet suscipit. Dolore occaecati ab.</p>
+            <a class='more' href='#'>more &rarr;</a>
+          </div>
+          <a class='buy_button btn_orange' href='#'>Explore!</a>
+        </div>
+        <div class='sider_box_green deal_box'>
+<%= link_to image_tag("20.jpg",alt:"exura")%>
+          <div class='details'>
+            <h3 class='blue'>Scuba Diving &dash; Generic content.</h3>
+            <p>The scuba diving wetsuit is largely determined by the individual needs and desires of the scuba diver, whether he or she is new to the diving fraternity or a seasoned veteran. One of the first and foremost issues that need consideration is the conditions in which the diver will be using the scuba diving wetsuit. The conditions will naturally determine the desired thickness, and related functionality of the new purchase.</p>
+            <a class='more' href='#'>more &rarr;</a>
+          </div>
+          <a class='buy_button btn_orange' href='#'>Explore!</a>
+        </div>
+      </div>
+      <div class='subsection_content'></div>
+      <div id='right_col4'>
+        <div class='sider_box_green'>
+	</div>
+        <div class='sider_box_orange'>
+          <div class='heading'>
+            <h4>Adventure Zone</h4>
+          </div>
+          <div class='section grey'> x
+            Adipisci architecto et. Incidunt nobis iure perspiciatis inventore modi. Quam sapiente et. Omnis est laudantium vero iste quia at eos.
+          </div>
+          <div class='section grey'>
+            Unde ut natus perferendis illum cupiditate sit. Ut ab dicta dolores eum cum aperiam. Laboriosam fuga est consequuntur. Reiciendis rerum quod. Sit aut ipsa impedit ut non dolorem repellat.
+          </div>
+        </div>
+        <div class='sider_box_blue'>
+          <div class='heading'>
+            <h4>Videos</h4>
+          </div>
+          <div class='section'>
+            Omnis et ex quo. Rem tempora dicta. Doloribus asperiores optio earum nam. Qui fugit ut ipsa et placeat aut. Rerum minus eaque at eum.
+<p><iframe src="http://www.youtube.com/embed/zG22qQydPVQ" frameborder="0" width="350" height="200"></iframe></p>
+<p><iframe width="350" height="200" src="http://www.youtube.com/embed/yKWoPlL2B8I" frameborder="0"></iframe></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='floatfix'></div>
+  </body>
+  </div> 
+</table>
+

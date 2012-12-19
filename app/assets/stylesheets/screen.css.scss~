@@ -1,0 +1,764 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "base"
+
+  //background-image: url("../images/bg.png")
+  font-size: 85%
+  line-height: 1.5em
+.header
+  width: 0%
+  background-color: rgba(255, 255, 255, 0.65)
+  +background-image(linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)))
+  +box-shadow(0 1px 3px 1px rgba(0, 0, 0, 0.05))
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10000
+    
+
+#flexslider
+  margin-top: -10px
+  width: 100%
+  +cb-shadows
+  position: relative 
+  max-width: 1440px
+  min-width: 920px
+  margin: 0 auto
+  background: url('../images/loading.gif') no-repeat 50% 50%
+  background: rgba(255, 255, 255, 0.25)
+  position: relative
+  border-top: 0
+  margin-bottom: 2em
+  +border-radius(0 0 0.5em 0.5em)
+  .flexslider
+    width: 100%
+    border: 0
+    background: transparent
+    .slides
+      img
+        max-height: 650px
+        width: 100%
+        +border-radius(0 0 0.5em 0.5em)
+  .home_slider .slides img
+    max-height: 600px
+    min-height: 500px
+  .flex-direction-nav li a
+    margin-top: 5%
+    z-index: 10
+
+.content_area
+  max-width: 1440px
+  min-width: 960px
+  padding: 0 20px
+  margin: 0 auto
+.cb_green
+  +content_box($green)
+.cb_blue
+  +content_box($blue)
+.cb_orange
+  +content_box($orange)
+.cb_red
+  +content_box($red)
+
+#trip_details
+  +zen-clear
+  +zen-grid-item(4,1)
+  +content-box($blue)
+
+.icon24
+  max-height: 24px
+  vertical-align: bottom
+#left_sider
+  +zen-clear
+  +zen-grid-item(2,1)
+  padding-right: 1%
+  padding-left: 0
+  +border-radius(0.5em 0 0 0.5em)
+  .sider_box_green, .sider_box_red, .sider_box_orange, .sider_box_blue
+    +border-radius(0.5em 0 0 0.5em)
+#right_sider
+  .sider_box_green, .sider_box_red, .sider_box_orange, .sider_box_blue
+    +border-radius(0 0.5em 0.5em 0)
+  
+#subsection_links, .left_sider
+  background: #888
+
+  li 
+    padding: 0
+  a
+    padding: 0.25em 2.5%
+    color: #fff
+    font-size: 1.25em
+    +heading-font
+    display: block
+    text-decoration: none
+    text-align: right
+    border-bottom: 1px solid #777
+    border-top: 1px solid #999
+    margin-right: 3px
+    +ts-dark
+    +transition(0.1s)
+    border-right: 3px solid transparent
+    .icon24
+      border-left: 1px solid #ccc
+      border-left: 1px solid rgba(255, 255, 255, 0.25)
+      padding-left: 2%
+      margin-left: 2%
+      +box-shadow(-1px 0 1px rgba(0, 0, 0, .2))
+    &:hover
+      background: $orange
+      border-right: 3px solid $orange
+      margin-right: 0        
+      color: #444
+      +ts
+  a.active, a.active:hover
+    cursor: default
+    background: $blue
+    color: #fafafa
+    +ts-dark
+    border-right: 3px solid $blue
+    margin-right: -3px
+    font-weight: bold
+.subsection_content
+  +zen-grid-item(7,3)
+  margin-bottom: 1em
+  padding: 0.5em
+  padding-right: 0
+  text-align: justify
+  .heading
+    color: $blue
+    +heading-font
+    font-size: 2em
+    +rhythm(0.25, 0, 0.25)
+    +ts
+#right_sider
+  +zen-grid-item(3,10)
+  padding-right: 0
+  color: #444
+
+
+.btn
+  +btn
+.btn_dark
+  +btn(lighten(#000, 40%))
+.btn_dark, .btn_dark:hover, .btn_dark:active
+  color: #fafafa
+  +ts-dark
+.btn_dark:hover
+  border-color: rgba(255, 255, 255, 0.25)
+.btn_red
+  +btn(saturate($red, 10%))
+.btn_blue
+  +btn(lighten(saturate($blue, 20%), 10%))
+.btn_green
+  +btn(saturate($green, 10%))
+.btn_orange
+  +btn(saturate($orange, 10%))
+.btn_blue, .btn_green, .btn_orange, .btn_red
+  color: #fafafa
+  +ts-dark
+  &:hover
+    color: #fafafa
+    +ts-dark
+#texture
+  height: 100%
+  width: 100%
+  background: url('../images/textures/new/05.png')
+  background-size: 5%
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 0
+  opacity: 0.35
+#infobox
+  +zen-clear
+  width: 100%
+  position: absolute
+  z-index: 1000
+  bottom: 0
+  left: 0
+  +background-image(linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)))
+  h2
+    display: inline-block
+    font-weight: 700
+    +heading-font
+    font-size: 2em
+    +text-shadow(1px 3px 1px rgba(0, 0, 0, .75), 3px 1px 1px rgba(0, 0, 0, .75), -1px -1px 0 rgba(255, 255, 255, 0.75))
+    margin: 0
+    vertical-align: middle
+    padding-left: 1%
+    color: #4df
+    .small
+      +body-font
+      color: inherit
+      +text-shadow(1px 1px 1px rgba(0, 0, 0, .75), 1px 1px 2px rgba(0, 0, 0, .75), -1px -1px  rgba(255, 255, 255, 0.75))
+      font-size: 0.55em
+      clear: left
+      display: block
+      font-weight: bold
+      margin-top: 0.5em
+  .other_details, .price
+    margin-right: 1%
+    text-align: right
+    float: right
+    background-color: #eee
+    +border-radius(0.5em)
+    padding: 0.25em
+    border: 1px solid #fff
+    border-color: rgba(255, 255, 255, 0.25)
+    +box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.25))
+    .detail
+      font-size: 1.25em
+      padding: 0.25em
+      float: right
+      height: inherit
+      border-right: 1px solid #eee
+      border-right-color: rgba(0, 0, 0, 0.15)
+      border-left: 1px solid #aaa
+      border-left-color: rgba(0, 0, 0, 0.05)
+      height: 24px
+      &:first-child
+        border-right: none
+      &:last-child
+        border-left: none
+      span.icon_back
+        width: 24px
+        height: 24px
+        display: inline-block
+        background-position: center center
+        background-attachment: scroll
+        background-size: 100% 100%
+        vertical-align: middle
+        opacity: 0.25
+  .price
+    background-color: $green
+    margin-right: -0.5em
+    +border-radius(0.5em 0 0 0.5em)
+    .detail
+      +heading-font
+      color: #fafafa
+      +ts-dark
+      font-weight: bold
+      span.icon_back
+        max-height: 12px
+        width: 8px
+          
+
+.sider1
+  +zen-clear
+  +zen-grid-item(2,11)
+
+
+#footer
+  height: 400px
+  background: #444
+  margin-top: 10em
+  border-top: 10px solid #fff
+  /*background-image: url('../images/bg.png') */
+  +box-shadow(inset 0 3px 10px rgba(0, 0, 0, 0.5))
+  +zen-grid-container
+.floatfix
+  clear: both
+#footer_container
+  max-width: 1440px
+  min-width: 920px
+  margin: 0 auto
+#footer_links
+  background: $green
+  +zen-grid-item(8, 1)
+  height: 200px
+  opacity: 0.25
+#footer_contact
+  background: $blue
+  +zen-grid-item(4, 9)
+  height: 200px
+  opacity: 0.25
+
+
+.activity_box
+  margin: 1em 0 
+  border
+  +cb-shadows
+  +border-radius(0.5em 0.5em 0.1em 0.1em)
+  cursor: pointer
+  .img
+    width: 100%
+    height: 120px
+    display: block
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+    +border-radius(0.5em 0.5em 0 0)
+    margin-bottom: 0
+    position: relative
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  .img_highlight
+    position: absolute
+    width: 100%
+    height: 30%
+    top: 0
+    left: 0
+    display: block
+    z-index: 10
+    +background-image(linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0), transparent, transparent, transparent, transparent))
+  .price_ribbon
+    +background-image(linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)))
+    position: absolute
+    top: -1%
+    padding: 0.5em
+    right: -1%
+    display: block
+    z-index: 100
+    background: #aaa
+    +transition(0.2s)
+    border-bottom: 1px solid rgba(0, 0, 0,  0.1)
+    border-bottom: 1px solid rgba(0, 0, 0,  0.1)
+    color: #fafafa
+    +ts-dark
+    font-weight: 700
+    +border-radius(0 0.5em 0 0)
+    +heading-font
+    +box-shadow(-1px 1px 2px rgba(0, 0, 0, 0))
+  .heading
+    border-top: 1px solid rgba(255, 255, 255, 0.75)
+    margin-top: 0
+    color: $blue
+    +transition(0.2s)
+    padding-top: 0.5em
+    padding-left: 2%
+    padding-right: 2%
+    text-align: center
+    background: #eee
+  &:hover
+    .heading
+      background: $blue
+      color: #fafafa
+      +ts-dark
+    .price_ribbon
+      background: $green
+      border-bottom: 1px solid rgba(255, 255, 255, 0.75)
+      border-left: 1px solid rgba(255, 255, 255, 0.75)
+      +box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.25))
+.activity_box.red
+  &:hover
+    .heading
+      background: $red
+      color: #444
+      +ts
+.activity_box.blue
+  &:hover
+    .heading
+      background: $blue
+.activity_box.green
+  &:hover
+    .heading
+      background: $green
+.activity_box.orange
+  &:hover
+    .heading
+      background: saturate($orange, 20%)
+      color: #444
+      +ts
+
+
+.buy_box
+  +sider_box($green)
+    
+.sider_box_green
+  +sider_box($green)
+.sider_box_red
+  +sider_box($red)
+.sider_box_orange
+  +sider_box($orange)
+.sider_box_blue
+  +sider_box($blue)
+  color: #444
+  .heading
+    color: #444
+
+.activities
+  +zen-clear
+  text-align: center
+  margin: 1em 0
+  .heading
+    border-bottom: 1px solid $blue
+    font-size: 1.5em
+    text-align: left
+    +box-shadow(0 1px 1px rgba(255, 255, 255, 0.75))
+    font-weight: normal
+  .activity_box
+    font-size: 1em
+    width: 19%
+    display: inline-block
+    vertical-align: top
+    .heading
+      font-size: 1em
+      text-align: center
+      height: 3em
+      margin-top: 0
+      overflow: hidden
+      border: 0
+
+
+
+.header_container
+  +zen-grid-container
+  
+#user_cp
+  +zen-grid-item(2, 11)
+  overflow: visible
+  padding-right: 2%
+  width: 250px
+  text-align: right
+  position: relative
+  span.arrow
+    float: right
+    height: 1em
+    padding: 0.75em 2%
+    color: rgba(255, 255, 255, 0.95)
+    +ts-dark
+    font-size: 2em
+  .avatar24
+    width: auto
+    height: 48px
+    float: left
+    margin-top: 20px
+  span.name_Cont
+    margin-bottom: 0
+    padding-left: 2%
+    width: inherit
+    text-align: right
+    h4
+      font-weight: normal
+      font-size: 1em
+      margin: 0
+      padding: 0
+      .name
+        font-weight: bold
+        +heading-font
+  .basket
+    margin-top: -1.5em
+    .num
+      +heading-font
+      color: $red
+      font-weight: bold
+      font-size: 2em
+  .mini_basket
+    background: rgba(0, 0, 0, 0.1)
+    position: absolute
+    height: 300px
+    width: inherit
+    top: 70px
+    right: 45px
+    z-index: 10000
+    display: block
+.inline_image
+  max-width: 50%
+
+
+#infobox .other_details .detail.type    
+  padding: 0
+  padding-right: 2px
+  margin-right: 2px
+  span.icon_back.activity_type
+    opacity: 1
+    height: 32px
+    width: 32px
+
+
+.section img.banner, .content img.banner, img.banner
+  width: 100%
+  margin: 1em auto 0.5em auto
+
+
+#twocol
+  .content_area
+    margin-top: 80px
+  #main_content
+    +zen-clear
+    +zen-grid-item(8, 1)
+  #right_sider
+    +zen-grid-item(4, 9)
+
+
+#checkout_steps
+  margin: 1em auto 2em auto
+  +border-radius(0.5em)
+  text-align: center
+  font-size: 1.25em
+  li
+    display: inline-block
+    a, a:hover
+      background: lighten($blue, 40%)
+      padding: 0.5em 1em
+      padding-right: 1.5em
+      margin-right: -1em
+      +border-radius(0.5em)
+      +box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.25), -2px 0 1px rgba(255, 255, 255, 0.5), 0 0 3px rgba(255, 255, 255, 1))
+      font-weight: normal
+      color: #666
+    a.active, a.active:hover
+      background: $orange
+      border: 1px solid rgba(255, 255, 255, 0.75)
+      font-weight: bold
+    a:active
+      background: lighten($green, 20%)
+      +ts
+    a.disabled, a.disabled:hover
+      background: #ccc
+      color: #888
+
+
+.hr_lined
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75)
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1)
+
+.field
+  margin: 0.5em 0
+  label
+    width: 30%
+    text-align: right
+    display: inline-block
+  select
+    background: lighten($blue, 45%)
+    padding: 0.25em 0.5em
+    +border-radius(0.25em)
+    border-color: #fafafa
+    border-color: rgba(255, 255, 255, 0.5)
+    font-size: 1.25em
+    color: #666
+    +transition(0.1s)
+    &:focus
+      background: #eee
+      color: #444
+      outline: none
+      +box-shadow(0 0 2px rgba(0, 0, 0, 0.3))
+  input[type="text"], textarea
+    padding: 0.25em 0.5em
+    +border-radius(0.25em)
+    font-size: 1.25em
+    border: 1px solid #fafafa
+    border: 1px solid rgba(255, 255, 255, 0.5)
+    color: #666
+    width: 25%
+    +transition(0.1s)
+    background: lighten($blue, 45%)
+    +box-shadow(0 0 2px rgba(0, 0, 0, 0.3))
+    &:focus
+      background: #eee
+      color: #444
+      outline: none
+      +box-shadow(0 0 2px rgba(0, 0, 0, 0.3))
+  input[type="text"].small
+    width: 15%
+  textarea
+    width: 50%
+    height: 150px
+    vertical-align: top
+    font-family: "Open Sans", sans
+
+.delete_link, .delete_link:hover, .delete_link:active
+  color: $red
+  font-weight: normal
+  font-size: 0.75em
+  background: none
+.delete_link:active
+  +ts
+.delete_link:before
+  content: "✘"
+  padding-right: 0.25em
+
+a.add
+  &:before
+    content: "⊕"
+    padding-right: 0.25em
+
+#booking_summary
+  position: fixed
+  top: 80px
+  width: 28%
+  z-index: 100
+  .heading
+    padding-bottom: 0
+  table
+    width: 100%
+    tr:nth-child(odd)
+      background: rgba(255, 255, 255, 0.25)
+    tr:nth-child(even)
+      background: rgba(255, 255, 255, 0.5)
+    td
+      padding: 0.25em 0.5em
+    td:first-child
+      width: 40%
+      text-align: right
+      vertical-align: top
+      font-weight: bold
+      +heading-font
+    td.price
+      font-size: 1.5em
+      vertical-align: middle
+  .field input[type="text"]
+    width: 80%
+    margin: 0 auto
+  .small
+    margin-top: 0
+    padding: 0.25em 0.5em
+    width: auto
+    font-weight: normal
+    font-size: 0.9em
+
+table.zebra
+  width: 100%
+  margin: 1em 0
+  thead
+    background: #444
+    color: #444
+    +heading-font
+    tr, tr:hover
+      background: rgba(255, 255, 255, 0.5)
+      +border-radius(0.5em 0.5em 0 0)
+  th
+    font-weight: bold
+  td, th
+    padding: 0.5em
+    word-wrap: break-word
+  tr:nth-child(odd)
+    background: rgba(255, 255, 255, 0.5)
+  tr:nth-child(even)
+    background: rgba(255, 255, 255, 0.25)
+  td:nth-child(odd)
+    background: rgba(0, 0, 0, 0.01)
+  td:nth-child(even)
+    background: rgba(0, 0, 0, 0.05)
+  td:first-child
+    font-weight: bold
+    width: 120px
+  tr
+    border-bottom: 1px solid #ccc
+    border-top: 1px solid #fff
+    &:hover
+      background-color: lighten($blue, 40%)
+  td.price
+    font-size: 1.25em
+    width: 75px
+    text-align: right
+
+#cannonball
+  position: absolute
+  z-index: 100
+  background: rgba(255, 255, 255, 0.75)
+  +border-radius(0.5em)
+  border: 1px solid rgba(255, 255, 255, 0.25)
+  +box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.25))
+  +background-image(linear-gradient(transparent, transparent, transparent, transparent, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 1)))
+  color: #444
+  width: 250px
+  bottom: 20px
+  right: 5%
+  padding: 0.5em
+  h4
+    text-align: center
+  .field
+    width: 100%
+    &:first-child
+      margin-top: 0
+    label
+      width: 80px
+      text-align: right
+      font-weight: bold
+      font-size: 0.85em
+      vertical-align: middle
+      line-height: 1.5em
+      +heading-font
+    input[type="text"]
+      width: 165px
+    select
+      width: 165px
+  a.btn_blue
+    padding: 0.25em 1em
+    margin-right: 1.25em
+      
+
+#categories_carousel
+  background: lighten($blue, 40%)
+  max-height: 180px
+  margin-top: -2em
+  margin-bottom: 1em
+  border: 1px solid #eee
+  +box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.25))
+  +background-image(linear-gradient(transparent, transparent, transparent, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 1)))
+  +border-radius(0 0 0.5em 0.5em)
+  border-top: 0
+  .es-carousel
+    height: 165px
+  h3
+    font-weight: bold
+    margin-bottom: 0.25em
+  .es-carousel
+    background: transparent
+  li
+    padding: 0
+  a
+    +border-radius(0.5em)
+    text-align: center
+    +background-image(none)
+    &:hover
+      color: inherit
+      +background-image(linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)))
+    &:active
+      border: 1px solid #fff
+      color: #fafafa
+      +ts-dark
+      background-color: $red
+      +box-shadow(inset 0 0 3px 1px rgba(0, 0, 0, 0.25))
+  img
+    max-width: 70%
+    margin: 0.25em auto
+    max-height: 120px
+    +border-radius(0.5em 0 0 0.5em)
+
+#left_col8
+  +zen-clear
+  +zen-grid-item(8, 1)
+  padding-right: 1%
+  padding-left: 0
+  .sider_box_green, .sider_box_red, .sider_box_orange, .sider_box_blue
+    +border-radius(0.5em 0 0 0.5em)
+
+.deal_box
+  background: #eee
+  margin: 0
+  position: relative
+  color: #777
+  +transition(0.1s)
+  .details
+    display: inline-block
+    max-width: 70%
+    font-size: 0.9em
+  .buy_button
+    background-color: #ccc
+    padding: 0.25em
+    width: 100px
+    margin-bottom: 0.5em
+    position: absolute
+    right: 0.5em
+    bottom: 0.5em
+  &:hover
+    .buy_button
+      background-color: saturate($orange, 20%)
+img.box
+  max-width: 25%
+  margin: -0.5em 0 0 -0.5em
+  +border-radius(0.5em 0 0 0.5em)
+  vertical-align: top
+  display: inline-block
+  +box-shadow(2px 0 1px rgba(0, 0, 0, 0.15))
+  border-right: 1px solid #eee
+    
+    
+#right_col4
+  +zen-grid-item(4, 9)
+  padding-left: 1%
+  padding-right: 0

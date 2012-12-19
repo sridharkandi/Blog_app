@@ -1,7 +1,12 @@
 Blog::Application.routes.draw do
   resources :posts do
-  resources :comments
-end
+   resources :comments
+ end
+get "home/index"
+ match "/about"=>"home#about"
+  match "/contactus"=>"home#contactus"
+  match "/team"=>"home#team"
+  match "/privacy_policy"=>"home#privacy_policy"
 
 
   # The priority is based upon order of creation:
@@ -53,7 +58,7 @@ end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
